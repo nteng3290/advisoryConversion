@@ -135,6 +135,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 h1, h2, h3, h4, h5, p {
   margin: 0; }
 
+.banner {
+  background: url(../images/paul-bence-395888.png); }
+
 .third {
   width: 33.33%; }
 
@@ -156,9 +159,21 @@ h1, h2, h3, h4, h5, p {
 footer {
   background: #1f2329; }
 
+button {
+  padding: 10px; }
+
 img {
   width: 100%; }
 
 .wrapper {
-  max-width: 1170px;
+  max-width: 60%;
   margin: 0 auto; }
+
+ul {
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  ul li {
+    padding: 0; }

@@ -5,12 +5,20 @@
 @import "partials/_header.scss";
 @import "partials/_main.scss";
 @import "partials/_footer.scss";
-
+@import "partials/_button.scss";
 
 img{
     width:100%;
 }
 .wrapper{
-    max-width: 1170px;
+    max-width: 60%;
     margin: 0 auto;
+}
+ul{
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    li{
+        padding: 0;
+    }
 }
