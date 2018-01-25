@@ -1,8 +1,32 @@
-//COLORS
-$primary: #2f87fd; //Skyblue
-$accent: #78aef8; //Paisley
-$block: #1f2329; //Cobalt 
 
+.top-nav{
+    background: $bg_color;
+}
+.top-nav,
+.company-info,
+.page-nav .wrapper,
+.page-nav-menu,
+.page-nav-icons,
+.page-nav-social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.company-info-img{
+        width: 30%;
+}
+.company-info-item{
+    display: flex;
+    flex-direction: row;
+}
+.page-nav{
+    background: $primary;
+    a{
+        color: white;
+    }
+}
 .banner{
-    background: url(../images/paul-bence-395888.png);
+    background: url(../images/photos/paul-bence-395888.png) no-repeat;
+    background-size: contain;
+    height: 650px;
 }

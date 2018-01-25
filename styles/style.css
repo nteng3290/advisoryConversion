@@ -135,8 +135,47 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 h1, h2, h3, h4, h5, p {
   margin: 0; }
 
+.top-nav {
+  background: #f5f5f5; }
+
+.top-nav,
+.company-info,
+.page-nav .wrapper,
+.page-nav-menu,
+.page-nav-icons,
+.page-nav-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.company-info-img {
+  width: 30%; }
+
+.company-info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.page-nav {
+  background: #2f87fd; }
+  .page-nav a {
+    color: white; }
+
 .banner {
-  background: url(../images/paul-bence-395888.png); }
+  background: url(../images/photos/paul-bence-395888.png) no-repeat;
+  background-size: contain;
+  height: 650px; }
 
 .third {
   width: 33.33%; }
@@ -163,10 +202,10 @@ button {
   padding: 10px; }
 
 img {
-  width: 100%; }
+  max-width: 100%; }
 
 .wrapper {
-  max-width: 60%;
+  max-width: 1170px;
   margin: 0 auto; }
 
 ul {
@@ -178,5 +217,5 @@ ul {
   ul li {
     padding: 0; }
 
-h1 {
-  background: red; }
+a {
+  text-decoration: none; }
