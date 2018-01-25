@@ -1,0 +1,12 @@
+.third{
+    width: 33.33%;
+}
+.fourth{
+    width: 25%;
+}
+.projects-img,
+.news-article{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
