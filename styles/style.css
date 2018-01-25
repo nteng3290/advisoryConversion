@@ -177,3 +177,6 @@ ul {
   display: flex; }
   ul li {
     padding: 0; }
+
+h1 {
+  background: red; }
