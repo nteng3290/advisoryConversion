@@ -11,6 +11,13 @@ $serif-heading: PlayfairDisplay;
 $sans-highlights: Poppins;
 $sans-p:Source Sans Pro;
 
+.flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
 @import "partials/_setup.scss";
 
 @import "partials/mixins";
@@ -31,8 +38,8 @@ img{
 }
 ul{
     padding: 0;
+    margin: 0;
     list-style-type: none;
-    display: flex;
     li{
         padding: 0;
     }

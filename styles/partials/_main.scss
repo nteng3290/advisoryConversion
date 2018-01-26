@@ -1,5 +1,8 @@
+.half{
+    @extend .flex;
+}
 .third{
-    width: 33.33%;
+    width: 32%;
 }
 .fourth{
     width: 25%;
@@ -9,4 +12,103 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+}
+.about-us{
+    .wrapper{
+        @extend .flex;
+    }
+    .co-description{
+        flex-basis: 70%;
+    }
+    .free-consult{
+        flex-basis: 20%;
+        button{
+            background: none;
+        }
+    }
+}
+.services{
+    background: $bg_color;
+    .third{
+        background: white;
+        padding: 30px;
+        min-height: 300px;
+    }
+}
+.services-title{
+    h3, h2{
+        text-align: center;
+    }
+}
+.services{
+    .third{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h4,p{
+            text-align: center;
+        }
+    }
+}
+.rational{
+    .rational-script{
+        @extend .flex;
+    }
+    .rationals{
+        @extend .flex;
+        .third{
+            border: 1px solid grey;
+        }
+    }
+}
+.credentials{
+    @extend .flex;
+    justify-content: space-around;
+    background: $block;
+    margin: 30px 0;
+    .fourth{
+        color: white;
+    }
+}
+.projects{
+    .projects-title{
+        h2,h3{
+            text-align:center;
+        }
+    }
+}
+.statement{ 
+    background: $primary;
+    padding: 50px;
+    .wrapper{
+        @extend .flex;
+        .statement-img{
+            flex-basis: 35%;
+        } 
+        .vp-statement{
+            text-align: center;
+            flex-basis: 60%;
+        }     
+    }
+}
+
+.news{
+    .news-title{
+        h2,h3{
+            text-align: center;
+        }
+    }
+    .news-details{
+        @extend .flex;
+        h3{
+            flex-basis: 85%;
+        }
+    }
+}
+.partners{
+     background: $primary;
+    .wrapper{
+        @extend .flex;
+    }  
 }

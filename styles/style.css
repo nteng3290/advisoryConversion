@@ -1,3 +1,23 @@
+.flex, .top-nav .wrapper, .contact-info, .contact-info .contact-info-phone,
+.contact-info .contact-info-mail, .accounts, .accounts .translate, .accounts .account-items, .company-info .wrapper, .company-info .company-info-logo,
+.company-info .company-info-item, .company-info .company-info-logo .company-info-office,
+.company-info .company-info-logo .company-info-open,
+.company-info .company-info-item .company-info-office,
+.company-info .company-info-item .company-info-open, .page-nav .wrapper, .page-nav ul, .page-nav ul li, .half, .about-us .wrapper, .rational .rational-script, .rational .rationals, .credentials, .statement .wrapper, .news .news-details, .partners .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -144,77 +164,23 @@ h2 {
   /* Approximation due to font substitution */
   text-align: left; }
 
-.flex, .top-nav .wrapper,
-.accounts,
-.account-deets,
-.company-info,
-.contact-info-phone,
-.contact-info-mail,
-.page-nav .wrapper,
-.page-nav-menu,
-.page-nav-icons,
-.page-nav-social, .company-info .company-info-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
-
 .top-nav {
   background: #f5f5f5; }
 
-.contact-info img {
-  width: 18%; }
+.contact-info .contact-info-phone,
+.contact-info .contact-info-mail {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
-.contact-info li {
-  -ms-flex-preferred-size: 50%;
-  flex-basis: 50%; }
+.contact-info .contact-info-img {
+  width: 20%; }
 
 .accounts {
   -ms-flex-preferred-size: 40%;
   flex-basis: 40%; }
   .accounts .translate-icon {
-    width: 10%; }
-
-.company-info .company-info-img {
-  width: 25%; }
-
-.company-info .company-info-info span {
-  color: #2f87fd; }
-
-.company-info button {
-  text-transform: uppercase;
-  background: none;
-  border: 2px solid #2f87fd;
-  -ms-flex-item-align: center;
-  align-self: center; }
-
-.page-nav {
-  background: #2f87fd; }
-  .page-nav .page-nav-menu {
-    -ms-flex-preferred-size: 65%;
-    flex-basis: 65%; }
-  .page-nav .page-nav-icons {
-    -ms-flex-preferred-size: 5%;
-    flex-basis: 5%; }
-  .page-nav .page-nav-social {
-    -ms-flex-preferred-size: 15%;
-    flex-basis: 15%; }
-  .page-nav a {
-    color: white; }
-
-.banner {
-  background: url(../images/photos/paul-bence-395888.png) no-repeat;
-  background-size: contain;
-  height: 650px; }
+    width: 20px; }
 
 select {
   background: none;
@@ -228,8 +194,46 @@ select {
   background-size: 10%;
   background-position: 95% bottom; }
 
+.company-info .company-info-img {
+  width: 30px; }
+
+.company-info .company-info-info span {
+  color: #2f87fd; }
+
+.company-info button {
+  text-transform: uppercase;
+  background: none;
+  border: 2px solid #2f87fd;
+  -ms-flex-item-align: center;
+  align-self: center; }
+
+.page-nav .wrapper {
+  background: #2f87fd; }
+
+.page-nav ul {
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+
+.page-nav .page-nav-menu {
+  -ms-flex-preferred-size: 65%;
+  flex-basis: 65%; }
+
+.page-nav .page-nav-icons {
+  -ms-flex-preferred-size: 5%;
+  flex-basis: 5%; }
+
+.page-nav .page-nav-social {
+  -ms-flex-preferred-size: 15%;
+  flex-basis: 15%; }
+
+.page-nav a {
+  color: white; }
+
+.banner {
+  background: url(../images/photos/paul-bence-395888.png) no-repeat; }
+
 .third {
-  width: 33.33%; }
+  width: 32%; }
 
 .fourth {
   width: 25%; }
@@ -245,6 +249,78 @@ select {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+
+.about-us .co-description {
+  -ms-flex-preferred-size: 70%;
+  flex-basis: 70%; }
+
+.about-us .free-consult {
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%; }
+  .about-us .free-consult button {
+    background: none; }
+
+.services {
+  background: #f5f5f5; }
+  .services .third {
+    background: white;
+    padding: 30px;
+    min-height: 300px; }
+
+.services-title h3, .services-title h2 {
+  text-align: center; }
+
+.services .third {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .services .third h4, .services .third p {
+    text-align: center; }
+
+.rational .rationals .third {
+  border: 1px solid grey; }
+
+.credentials {
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  background: #1f2329;
+  margin: 30px 0; }
+  .credentials .fourth {
+    color: white; }
+
+.projects .projects-title h2, .projects .projects-title h3 {
+  text-align: center; }
+
+.statement {
+  background: #2f87fd;
+  padding: 50px; }
+  .statement .wrapper .statement-img {
+    -ms-flex-preferred-size: 35%;
+    flex-basis: 35%; }
+  .statement .wrapper .vp-statement {
+    text-align: center;
+    -ms-flex-preferred-size: 60%;
+    flex-basis: 60%; }
+
+.news .news-title h2, .news .news-title h3 {
+  text-align: center; }
+
+.news .news-details h3 {
+  -ms-flex-preferred-size: 85%;
+  flex-basis: 85%; }
+
+.partners {
+  background: #2f87fd; }
 
 footer {
   background: #1f2329; }
@@ -263,10 +339,8 @@ img {
 
 ul {
   padding: 0;
-  list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  margin: 0;
+  list-style-type: none; }
   ul li {
     padding: 0; }
 

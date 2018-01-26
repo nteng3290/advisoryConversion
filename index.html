@@ -9,119 +9,160 @@
     <link rel="stylesheet" href="styles/style.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Poppins|Source+Sans+Pro" rel="stylesheet"> 
+    <!-- animations -->
+    <link rel="stylesheet" href="styles/animate.css">
 </head>
 <body>
     <header>
-        <div class="navigation">
-            <div class="top-nav">
-                <div class="wrapper">
-                    <nav>
-                        <ul class="contact-info">
-                            <li class="contact-info-phone">
-                                <img src="images/icons/phone-call.png" alt="phone icon">
-                                <p><a href="#">+88 901231208</a></p>
-                            </li>
-                            <li class="contact-info-mail">
-                                <img src="images/icons/mail.png" alt="mail icon">
-                                <p><a href="#">Perfect_help@gmail.com</a></p>
-                            </li>
-                        </ul>
-                    </nav>
-                    <nav class="accounts">
-                        <div class="translate">
-                            <img src="images/icons/translate.png" alt="translate">
-                            <select name="translation" id="translation">
-                                <option value="english" selected>English</option>
-                                <option value="french">French</option>
-                                <option value="chinese">中文</option>
-                            </select>
-                        </div>
-                        
-                        <ul class="account-items">
-                            <li><a href="#">about</a></li>
-                            <li><a href="#">claim & policy</a></li>
-                            <li class="selected"><a href="#">register</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+        <div class="top-nav">
             <div class="wrapper">
-                <div class="company-info">
-                    <div class="company-info-item">
-                        <div class="company-info-img">
-                            <img src="images/icons/2398145 - app locked mobile open line safe secured security.png" alt="Advisory Logo">
+                <div class="contact-info">
+                    <div class="contact-info-phone">
+                        <div class="contact-info-img">
+                            <img src="images/icons/phone-call.png" alt="phone icon">
                         </div>
-                        <div class="company-info-info">
-                            <h3>advisor<span>y</span></h3>
-                            <p>perfect business soltions</p>
-                        </div>
+                        <a href="#">+88 901231208</a>
                     </div>
-                    <div class="company-info-item">
-                        <div class="company-info-img"><img src="images/icons/internet.png" alt="world icon"></div>
+                    <div class="contact-info-mail">
+                        <div class="contact-info-img"><img src="images/icons/mail.png" alt="mail icon"></div>
+                        <a href="#">Perfect_help@gmail.com</a>
+                    </div>
+                </div>
+                <div class="accounts">
+                    <div class="translate">
+                        <div class="translate-icon"><img src="images/icons/translate.png" alt="translate"></div>
+                        <select name="translation" id="translation">
+                            <option value="english" selected>English</option>
+                            <option value="french">French</option>
+                            <option value="chinese">中文</option>
+                        </select>
+                    </div>
+                    <ul class="account-items">
+                        <li>
+                            <a href="#">about</a>
+                        </li>
+                        <li>
+                            <a href="#">claim & policy</a>
+                        </li>
+                        <li class="selected">
+                            <a href="#">register</a>
+                        </li>
+                    </ul>
+                </div> <!--End accounts div-->
+            </div> <!--End of Top Nav Wrapper-->
+        </div> <!--End of Top Nav-->
+        <div class="company-info">
+            <div class="wrapper">
+                <div class="company-info-logo">
+                    <div class="company-info-img">
+                        <img src="images/icons/2398145 - app locked mobile open line safe secured security.png" alt="Advisory Logo">
+                    </div>
+                    <div class="company-info-info">
+                        <h3>advisor
+                            <span>y</span>
+                        </h3>
+                        <p>perfect business soltions</p>
+                    </div>
+                </div>
+                <div class="company-info-item">
+                    <div class="company-info-office">
+                        <div class="company-info-img">
+                            <img src="images/icons/internet.png" alt="world icon">
+                        </div>
                         <div class="company-info-info">
                             <h4>main office</h4>
                             <p>36 advice the good, CA</p>
                         </div>
                     </div>
-                    <div class="company-info-item">
-                        <div class="company-info-img"><img src="images/icons/stopwatch.png" alt="stopwatch"></div>
+                    <div class="company-info-open">
+                        <div class="company-info-img">
+                            <img src="images/icons/stopwatch.png" alt="stopwatch">
+                        </div>
                         <div class="company-info-info">
                             <h4>opening time</h4>
-                            <p>mon-sri 10.00 to 19:00</p>
+                            <p>mon-fri 10.00 to 19:00</p>
                         </div>
                     </div>
-                    <button>free consultation</button>
                 </div>
-                </div>
-        </div>
+                <button>free consultation</button>
+            </div>
+        </div> <!--End of Company Info-->
         <nav class="page-nav">
-           <div class="wrapper">
+            <div class="wrapper">
                 <ul class="page-nav-menu">
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">services</a></li>
-                    <li><a href="#">projects</a></li>
-                    <li><a href="#">blog</a></li>
-                    <li><a href="#">shop</a></li>
-                    <li><a href="#">contact</a></li>
+                    <li>
+                        <a href="#">home</a>
+                    </li>
+                    <li>
+                        <a href="#">about us</a>
+                    </li>
+                    <li>
+                        <a href="#">services</a>
+                    </li>
+                    <li>
+                        <a href="#">projects</a>
+                    </li>
+                    <li>
+                        <a href="#">blog</a>
+                    </li>
+                    <li>
+                        <a href="#">shop</a>
+                    </li>
+                    <li>
+                        <a href="#">contact</a>
+                    </li>
                 </ul>
                 <ul class="page-nav-icons">
-                    <li><a href="#">
-                        <img src="images/icons/shopping-bag 126515.png" alt="shopping bag icon">
-                    </a></li>
-                    <li><a href="#">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                    </a></li>
+                    <li>
+                        <a href="#">
+                            <img src="images/icons/shopping-bag 126515.png" alt="shopping bag icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                    </li>
                 </ul>
                 <ul class="page-nav-social">
-                    <li><a href="#">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a></li>
-                    <li><a href="#">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </a></li>
-                    <li><a href="#">
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </a></li>
-                    <li><a href="#">
-                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                    </a></li>
-                    <li><a href="#">
-                        <i class="fa fa-google" aria-hidden="true"></i>
-                    </a></li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-google" aria-hidden="true"></i>
+                        </a>
+                    </li>
                 </ul>
-           <div>
-        </nav>
+            <div>
+        </nav> <!--Page Nav-->
         <div class="banner">
             <div class="wrapper">
-                <h1>advisory business consulting services</h1>
-                <p>We offer consulting expertise in the areas of turnaround management, receiverships, and loan restructuring. Our services, through corporate renewal and revoery, enable a return to profitability.</p>
+                <h1 class="animated slideInUp">advisory business consulting services</h1>
+                <p>We offer consulting expertise in the areas of turnaround management, receiverships, and loan restructuring. Our services,through corporate renewal and revoery, enable a return to profitability.</p>
                 <button>meet our expert</button>
             </div>
-        </div>
+        </div> <!--End of Banner-->
     </header>
     <main>
-        <section class="about-us">
+        <article class="about-us">
             <div class="wrapper">
                 <div class="co-description">
                     <h3>we help</h3>
@@ -130,10 +171,17 @@
                     <button>read more</button>
                 </div>
                 <div class="free-consult">
+                    <h3>Our free offer</h3>
+                    <p>
+                        Helping you get the greatest strategic advangtage from your data management environment.
+                    </p>
+                    <p>
+                        We then work with your key stakeholders to develop actionable recommendations along with design
+                    </p>
                     <button>free consultation</button>
                 </div>
             </div>
-        </section>
+        </article>
         <section class="services">
             <div class="wrapper">
                 <div class="services-title">
@@ -172,14 +220,17 @@
             </div>
             <!-- There are two halfs to the service section (Style first half first) -->
         </section> <!-- End of 'services' section-->
-        <section class="rational">
+        <article class="rational">
             <div class="wrapper">
-                <div class="rational-script"></div>
-                <div class="rational-image"><img src="images/photos/gem-lauris-a-place-for-creation-384958.png" alt="colour block painting"></div>
-                <div class="rationals-content">
-                    <h2>why choosing advisory</h2>
-                    <h5>Our services, through corporate renewal and recovery, enable a return to profitability.</h5>
-                    <p>Advisory Business Consulting offers a wide range of services of business either before or during touch financial times. What sets us apart from other industry is over three decades of combined legal and business expertise. Whether your business is struggling to avoid bankruptcy or trying its best to prepare for it, we will provide the assistance you need to make the right decisions.</p>
+                <div class="rational-script">
+                    <div class="rationals-content">
+                        <h2>why choosing advisory</h2>
+                        <h5>Our services, through corporate renewal and recovery, enable a return to profitability.</h5>
+                        <p>Advisory Business Consulting offers a wide range of services of business either before or during touch financial times. What sets us apart from other industry is over three decades of combined legal and business expertise. Whether your business is struggling to avoid bankruptcy or trying its best to prepare for it, we will provide the assistance you need to make the right decisions.</p>
+                    </div>
+                    <div class="rational-image">
+                        <img src="images/photos/gem-lauris-a-place-for-creation-384958.png" alt="colour block painting">
+                    </div>
                 </div>
                 <div class="rationals">
                     <div class="third">
@@ -199,7 +250,7 @@
                     </div> <!-- End of 'thid' div-->
                 </div>
             </div>
-        </section>
+        </article>
         <section class="credentials">
             <div class="fourth">
                 <div class="icon">
