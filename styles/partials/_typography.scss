@@ -1,6 +1,54 @@
 h1,h2,h3,h4,h5,p{
     margin: 0;
 }
+h1{
+    @include serif-headings(71px);
+    text-transform: capitalize;
+    color: white;
+}
 h2{
-    @include fontSize(50px);
+    @include serif-headings(45px);
+    text-transform: capitalize;
+    color: $font-color;
+}
+h3{
+    @include serif-headings(20px);
+    text-transform: capitalize;
+}
+h4{
+    @include sans-headings(22px);
+}
+p{
+    @include p-text(16px);
+}
+.accounts{
+    .account-items{
+        text-transform: capitalize;
+        .selected{
+            border-bottom: 1px solid $font-color;
+        }
+    }
+}
+.page-nav{
+    text-transform: uppercase;
+    .page-nav-menu li:nth-of-type(7){
+        text-transform: capitalize;
+    }
+}
+.about-us{
+    .co-description{
+        h2{
+            text-transform: none;
+            margin-bottom: 20px;
+        }
+        p{
+            margin: 20px 0;
+            line-height: 36px;
+        }
+    }
+    .free-consult{
+        h3{
+            margin: 10px 0;
+        }
+    }
 }

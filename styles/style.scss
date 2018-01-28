@@ -5,7 +5,7 @@ $block: #1f2329; //Cobalt
 $bg-color: #f5f5f5; //Offwhite
 
 //TEXT
-$main-font-color: #272626; //Black
+$font-color: #272626; //Black
 $p-color: #747474; //DarkGrey
 $serif-heading: PlayfairDisplay;
 $sans-highlights: Poppins;
@@ -17,6 +17,7 @@ $sans-p:Source Sans Pro;
     align-items: center;
     justify-content: space-between;
 }
+
 
 @import "partials/_setup.scss";
 

@@ -1,18 +1,23 @@
 .top-nav{
     background: $bg_color;
+    padding: 10px;
     .wrapper{
         @extend .flex;
     }
 }
 .contact-info{
     @extend .flex;
+    flex-basis: 35%;
     .contact-info-phone,
     .contact-info-mail{
         @extend .flex;
         align-items: center;
     }
-     .contact-info-img{
-        width: 20%;
+    .contact-info-phone img{
+        width: 20px;
+    }
+    .contact-info-mail img{
+        width: 30px;
     }
 }
 .accounts{
@@ -23,9 +28,11 @@
     }
     .translate{
         @extend .flex;
+        flex-basis: 20%;
     }
     .account-items{
         @extend .flex;
+        flex-basis: 60%;
     }
 }
 select{
@@ -39,6 +46,7 @@ select{
     background-position: 95% bottom;
 }
 .company-info{
+    padding: 20px 0;
     .wrapper{
         @extend .flex;
     }
@@ -61,12 +69,14 @@ select{
         background: none;
         border: 2px solid $primary;
         align-self: center;
+        color: $primary;
     }
 }
 .page-nav{
     .wrapper{
         @extend .flex;
         background: $primary;
+        padding: 10px 0;
     }
     ul{
         @extend .flex;
@@ -79,7 +89,7 @@ select{
         flex-basis: 65%;
     }
     .page-nav-icons{
-        flex-basis: 5%;
+        flex-basis: 10%;
     }
     .page-nav-social{
         flex-basis: 15%;
@@ -89,7 +99,24 @@ select{
     }
 }
 .banner{
+    position: relative;
+    .overlay{
+        position: absolute;
+        top:0;
+        bottom: 0;
+        right:0;
+        left: 0;
+        background: rgba(0,0,0,0.4);
+    }
     background: url(../images/photos/paul-bence-395888.png) no-repeat;
     // background-size: contain;
-    // height: 650px;
+    height: 650px;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    .banner-content{
+        width: 70%;
+    }
 }

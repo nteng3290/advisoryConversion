@@ -3,7 +3,7 @@
 .company-info .company-info-item, .company-info .company-info-logo .company-info-office,
 .company-info .company-info-logo .company-info-open,
 .company-info .company-info-item .company-info-office,
-.company-info .company-info-item .company-info-open, .page-nav .wrapper, .page-nav ul, .page-nav ul li, .half, .about-us .wrapper, .rational .rational-script, .rational .rationals, .credentials, .statement .wrapper, .news .news-details, .partners .wrapper {
+.company-info .company-info-item .company-info-open, .page-nav .wrapper, .page-nav ul, .page-nav ul li, .half, .about-us .about-us-stuff, .rational .rational-script, .rational .rationals, .credentials, .projects .projects-detail, .statement .wrapper, .news .news-details, .partners .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,32 +155,90 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 h1, h2, h3, h4, h5, p {
   margin: 0; }
 
-h2 {
-  font-size: 50px;
+h1 {
+  font-size: 71px;
   font-family: PlayfairDisplay;
-  color: rgba(39, 39, 39, 0.7);
   font-weight: 700;
-  line-height: 58px;
-  /* Approximation due to font substitution */
+  text-align: left;
+  text-transform: capitalize;
+  color: white; }
+
+h2 {
+  font-size: 45px;
+  font-family: PlayfairDisplay;
+  font-weight: 700;
+  text-align: left;
+  text-transform: capitalize;
+  color: #272626; }
+
+h3 {
+  font-size: 20px;
+  font-family: PlayfairDisplay;
+  font-weight: 700;
+  text-align: left;
+  text-transform: capitalize; }
+
+h4 {
+  font-size: 22px;
+  font-family: Source Sans Pro;
+  font-weight: 700;
   text-align: left; }
 
+p {
+  font-size: 16px;
+  font-family: Source Sans Pro;
+  text-align: left;
+  line-height: 32px; }
+
+.accounts .account-items {
+  text-transform: capitalize; }
+  .accounts .account-items .selected {
+    border-bottom: 1px solid #272626; }
+
+.page-nav {
+  text-transform: uppercase; }
+  .page-nav .page-nav-menu li:nth-of-type(7) {
+    text-transform: capitalize; }
+
+.about-us .co-description h2 {
+  text-transform: none;
+  margin-bottom: 20px; }
+
+.about-us .co-description p {
+  margin: 20px 0;
+  line-height: 36px; }
+
+.about-us .free-consult h3 {
+  margin: 10px 0; }
+
 .top-nav {
-  background: #f5f5f5; }
+  background: #f5f5f5;
+  padding: 10px; }
 
-.contact-info .contact-info-phone,
-.contact-info .contact-info-mail {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-.contact-info .contact-info-img {
-  width: 20%; }
+.contact-info {
+  -ms-flex-preferred-size: 35%;
+  flex-basis: 35%; }
+  .contact-info .contact-info-phone,
+  .contact-info .contact-info-mail {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .contact-info .contact-info-phone img {
+    width: 20px; }
+  .contact-info .contact-info-mail img {
+    width: 30px; }
 
 .accounts {
   -ms-flex-preferred-size: 40%;
   flex-basis: 40%; }
   .accounts .translate-icon {
     width: 20px; }
+  .accounts .translate {
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 20%; }
+  .accounts .account-items {
+    -ms-flex-preferred-size: 60%;
+    flex-basis: 60%; }
 
 select {
   background: none;
@@ -194,21 +252,23 @@ select {
   background-size: 10%;
   background-position: 95% bottom; }
 
-.company-info .company-info-img {
-  width: 30px; }
-
-.company-info .company-info-info span {
-  color: #2f87fd; }
-
-.company-info button {
-  text-transform: uppercase;
-  background: none;
-  border: 2px solid #2f87fd;
-  -ms-flex-item-align: center;
-  align-self: center; }
+.company-info {
+  padding: 20px 0; }
+  .company-info .company-info-img {
+    width: 30px; }
+  .company-info .company-info-info span {
+    color: #2f87fd; }
+  .company-info button {
+    text-transform: uppercase;
+    background: none;
+    border: 2px solid #2f87fd;
+    -ms-flex-item-align: center;
+    align-self: center;
+    color: #2f87fd; }
 
 .page-nav .wrapper {
-  background: #2f87fd; }
+  background: #2f87fd;
+  padding: 10px 0; }
 
 .page-nav ul {
   -ms-flex-pack: distribute;
@@ -219,8 +279,8 @@ select {
   flex-basis: 65%; }
 
 .page-nav .page-nav-icons {
-  -ms-flex-preferred-size: 5%;
-  flex-basis: 5%; }
+  -ms-flex-preferred-size: 10%;
+  flex-basis: 10%; }
 
 .page-nav .page-nav-social {
   -ms-flex-preferred-size: 15%;
@@ -230,7 +290,32 @@ select {
   color: white; }
 
 .banner {
-  background: url(../images/photos/paul-bence-395888.png) no-repeat; }
+  position: relative;
+  background: url(../images/photos/paul-bence-395888.png) no-repeat;
+  height: 650px;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .banner .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4); }
+  .banner .banner-content {
+    width: 70%; }
 
 .third {
   width: 32%; }
@@ -250,25 +335,30 @@ select {
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
-.about-us .co-description {
-  -ms-flex-preferred-size: 70%;
-  flex-basis: 70%; }
-
-.about-us .free-consult {
-  -ms-flex-preferred-size: 20%;
-  flex-basis: 20%; }
-  .about-us .free-consult button {
-    background: none; }
+.about-us {
+  margin: 50px; }
+  .about-us .co-description {
+    -ms-flex-preferred-size: 70%;
+    flex-basis: 70%; }
+  .about-us .free-consult {
+    background: #f5f5f5;
+    border-right: 1px solid #2f87fd;
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 20%;
+    padding: 20px; }
 
 .services {
-  background: #f5f5f5; }
+  background: #f5f5f5;
+  padding: 50px 0; }
   .services .third {
     background: white;
     padding: 30px;
     min-height: 300px; }
 
-.services-title h3, .services-title h2 {
-  text-align: center; }
+.services-title {
+  padding: 15px; }
+  .services-title h3, .services-title h2 {
+    text-align: center; }
 
 .services .third {
   display: -webkit-box;
@@ -287,8 +377,10 @@ select {
   .services .third h4, .services .third p {
     text-align: center; }
 
-.rational .rationals .third {
-  border: 1px solid grey; }
+.rational {
+  margin: 50px; }
+  .rational .rationals .third {
+    border: 1px solid grey; }
 
 .credentials {
   -ms-flex-pack: distribute;
@@ -321,6 +413,8 @@ select {
 
 .partners {
   background: #2f87fd; }
+  .partners .wrapper {
+    padding: 10px; }
 
 footer {
   background: #1f2329; }
@@ -328,7 +422,13 @@ footer {
 button {
   padding: 10px;
   background: #2f87fd;
-  border: none; }
+  border: none;
+  color: white;
+  text-transform: capitalize; }
+
+.transparent, .about-us .free-consult button {
+  background: none;
+  color: #2f87fd; }
 
 img {
   max-width: 100%; }

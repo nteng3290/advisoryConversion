@@ -14,21 +14,26 @@
     justify-content: space-between;
 }
 .about-us{
-    .wrapper{
+    margin: 50px;
+    .about-us-stuff{
         @extend .flex;
     }
     .co-description{
         flex-basis: 70%;
     }
     .free-consult{
+        background: $bg-color;
+        border-right: 1px solid $primary;
         flex-basis: 20%;
+        padding: 20px;
         button{
-            background: none;
+            @extend .transparent;
         }
     }
 }
 .services{
     background: $bg_color;
+    padding: 50px 0;
     .third{
         background: white;
         padding: 30px;
@@ -36,6 +41,7 @@
     }
 }
 .services-title{
+    padding: 15px;
     h3, h2{
         text-align: center;
     }
@@ -52,6 +58,7 @@
     }
 }
 .rational{
+    margin: 50px;
     .rational-script{
         @extend .flex;
     }
@@ -76,6 +83,9 @@
         h2,h3{
             text-align:center;
         }
+    }
+    .projects-detail{
+        @extend .flex;
     }
 }
 .statement{ 
@@ -110,5 +120,6 @@
      background: $primary;
     .wrapper{
         @extend .flex;
+        padding: 10px;
     }  
 }

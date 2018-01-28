@@ -1,9 +1,19 @@
-@mixin fontSize($sizeValue){
+@mixin serif-headings($sizeValue){
     font-size: $sizeValue;
     font-family: PlayfairDisplay;
-    color:rgba(39, 39, 39, 0.7);
     font-weight: 700;
-    line-height: 58px;/* Approximation due to font substitution */
     text-align: left;
+}
+@mixin sans-headings($sizeValue){
+    font-size: $sizeValue;
+    font-family: $sans-p;
+    font-weight: 700;
+    text-align: left; 
+}
+@mixin p-text($sizeValue){
+    font-size: $sizeValue;
+    font-family: $sans-p;
+    text-align: left; 
+    line-height: 32px;
 }
 
