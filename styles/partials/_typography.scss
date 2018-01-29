@@ -38,12 +38,13 @@ p{
         font-size: 1.4rem;
     }
 }
-.accounts{
-    .account-items{
-        text-transform: capitalize;
-        .selected{
-            border-bottom: 1px solid $font-color;
+.account-items{
+    text-transform: capitalize;
+        li{
+            font-size: 1.8rem;
         }
+    .selected{
+        border-bottom: 1px solid $font-color;
     }
 }
 .company-info{
@@ -82,7 +83,16 @@ p{
 .banner-content{
     p{
         color: white;
+        margin: 40px 0 60px 0;
     }        
+}
+.banner-nav{
+    .arrow{
+        i{
+            font-size: 3rem;
+            color: white;
+        }
+    }
 }
 .about-us{
     h3{
@@ -143,7 +153,7 @@ p{
 .services-title,
 .projects-title,
 .news-title{
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     h2{
         color: $primary;
         position: relative;
@@ -167,5 +177,92 @@ p{
     p,h4{
         text-align: center;
         color: white;
+    }
+}
+.news{
+    .news-details{
+        h3{
+            @include sans-highlights-p (2rem);
+            line-height: 37px;
+            text-transform: none
+        }
+    }
+    .news-content{
+        h3{
+            @include sans-highlights (1.8rem);
+            color: $primary;
+        }
+        p{
+            @include sans-highlights-p (1.6rem);
+            text-transform: none;
+            line-height: 32px;
+            letter-spacing: 0.4px;
+        }
+        p:last-of-type{
+            color: $primary;
+        }
+    }
+}
+.footer-contact{
+    a{
+        color: white;
+        @include sans-highlights-p(1.5rem);
+    }
+}
+.footer-co-info{
+    .company-info-info{
+        h3{
+            color: white;
+            @include serif-headings(3.2rem);
+        }
+        span{
+            color: $primary;
+            @include serif-headings(3.2rem);
+            text-transform: lowercase;
+            position: absolute;
+        }
+        p{
+            color: $p-color;
+            text-transform: capitalize;
+        }
+    }
+    .company-vision p{
+        color: $p-color;
+    }
+}
+.quick-links{
+    h3{
+        @include p-text(1.8rem);
+        color:white;
+        margin-bottom: 30px;
+    }
+    li{
+        margin: 10px 0;
+    }
+    a{
+        @include sans-highlights-p(1.6rem);
+        letter-spacing: 0.4px;
+        color: $p-color;
+        text-transform: capitalize;
+    }
+    a:hover{
+        color: $primary;
+    }
+}
+.latest-news{
+    h3{
+        @include sans-highlights(1.8rem);
+        color:white;
+        margin-bottom: 30px;
+    }
+    .link-news{
+        p,a{
+            @include sans-highlights-p(1.5rem)
+            color: $p-color;
+            transition: all 0.5s;
+        }
+        a:hover{
+            color: $primary;
+        }
     }
 }

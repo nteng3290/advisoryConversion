@@ -26,4 +26,11 @@
     text-align: left; 
     text-transform: capitalize;
 }
+@mixin sans-highlights-p($sizeValue){
+    font-size: $sizeValue;
+    font-family: $sans-highlights;
+    font-weight: 400;
+    text-align: left; 
+    text-transform: capitalize;
+}
 

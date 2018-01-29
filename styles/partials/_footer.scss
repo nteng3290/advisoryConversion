@@ -1,3 +1,89 @@
 footer{
     background: $block;
+    // position: relative;
+    .wrapper{
+        @extend .flex;
+        align-items: flex-start;
+    }
+}
+.footer-contact{
+    margin-bottom: 50px;
+    .foot-contact-info{
+        @extend .flex;
+        background: $dark-accent;
+        width: 100%;
+        padding: 10px;
+        position: relative;
+        bottom: 20px;
+    }
+    .footer-contact-accent{
+        color: $medium-accent;
+        width:95%;
+        height: 20px;
+        margin: 0 auto;
+        // position: relative;
+        // bottom:10px;
+    }
+    .foot-email{
+        @extend .flex;
+    }
+    .foot-phone{
+        @extend .flex;
+    }
+    .foot-office{
+        @extend .flex;
+    }
+}
+.footer-co-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-basis: 40%;
+    .company-info-img{
+        margin-right: 20px;
+    }
+    .footer-logo{
+        @extend .flex;
+        margin-bottom: 30px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        label{
+            color: $primary;
+        }
+    }
+}
+.quick-links{
+    flex-basis: 20%;
+}
+.latest-news{
+    flex-basis: 25%;
+    button{
+        @extend .transparent;
+        color: $primary;
+    }
+    .link-news{
+         p{
+            padding-bottom: 20px;
+        }
+        button i{
+            color: white;
+            margin-right: 5px;
+        }
+    }
+    .link-news:nth-of-type(2){
+        padding-top: 20px;
+        border-top: 1px solid $p-color;
+        margin: 30px 0;
+    }
+}
+.copyright{
+    margin-top: 100px;
+    .wrapper{
+        border-top: 1px solid $p-color;
+    }
+    p{
+        color: $p-color;
+    }
 }

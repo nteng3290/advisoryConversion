@@ -1,6 +1,6 @@
 .flex, .top-nav .wrapper, .contact-info, .contact-info .contact-info-phone,
 .contact-info .contact-info-mail, .accounts, .accounts .translate, .accounts .account-items, .company-info .wrapper, .company-info .company-info-logo, .company-info .company-info-item, .company-info .company-info-item .company-info-office,
-.company-info .company-info-item .company-info-open, .page-nav .wrapper, .page-nav ul, .page-nav ul li, .half, .about-us .about-us-stuff, .rational .rational-script, .rational .rationals, .rational .rationals .rational-title, .credentials .outer-wrapper, .projects .projects-detail, .statement .wrapper, .news .news-details, .partners .wrapper {
+.company-info .company-info-item .company-info-open, .page-nav .wrapper, .page-nav ul, .page-nav ul li, .banner .banner-nav, .banner .banner-nav .arrow, .half, .about-us .about-us-stuff, .rational .rational-script, .rational .rationals, .rational .rationals .rational-title, .credentials .outer-wrapper, .projects .projects-detail, .statement .wrapper, .news .news-details, .partners .wrapper, footer .wrapper, .footer-contact .foot-contact-info, .footer-contact .foot-email, .footer-contact .foot-phone, .footer-contact .foot-office, .footer-co-info .footer-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -231,9 +231,11 @@ p {
 .contact-info a {
   font-size: 1.4rem; }
 
-.accounts .account-items {
+.account-items {
   text-transform: capitalize; }
-  .accounts .account-items .selected {
+  .account-items li {
+    font-size: 1.8rem; }
+  .account-items .selected {
     border-bottom: 1px solid #272626; }
 
 .company-info .company-info-info {
@@ -262,6 +264,11 @@ p {
     color: white; }
 
 .banner-content p {
+  color: white;
+  margin: 40px 0 60px 0; }
+
+.banner-nav .arrow i {
+  font-size: 3rem;
   color: white; }
 
 .about-us h3 {
@@ -313,7 +320,7 @@ p {
 .services-title,
 .projects-title,
 .news-title {
-  margin-bottom: 50px; }
+  margin-bottom: 80px; }
   .services-title h2,
   .projects-title h2,
   .news-title h2 {
@@ -342,6 +349,117 @@ p {
   text-align: center;
   color: white; }
 
+.news .news-details h3 {
+  font-size: 2rem;
+  font-family: Poppins;
+  font-weight: 400;
+  text-align: left;
+  text-transform: capitalize;
+  line-height: 37px;
+  text-transform: none; }
+
+.news .news-content h3 {
+  font-size: 1.8rem;
+  font-family: Poppins;
+  font-weight: 700;
+  text-align: left;
+  text-transform: capitalize;
+  color: #2f87fd; }
+
+.news .news-content p {
+  font-size: 1.6rem;
+  font-family: Poppins;
+  font-weight: 400;
+  text-align: left;
+  text-transform: capitalize;
+  text-transform: none;
+  line-height: 32px;
+  letter-spacing: 0.4px; }
+
+.news .news-content p:last-of-type {
+  color: #2f87fd; }
+
+.footer-contact a {
+  color: white;
+  font-size: 1.5rem;
+  font-family: Poppins;
+  font-weight: 400;
+  text-align: left;
+  text-transform: capitalize; }
+
+.footer-co-info .company-info-info h3 {
+  color: white;
+  font-size: 3.2rem;
+  font-family: PlayfairDisplay;
+  font-weight: 700;
+  text-align: left;
+  text-transform: capitalize; }
+
+.footer-co-info .company-info-info span {
+  color: #2f87fd;
+  font-size: 3.2rem;
+  font-family: PlayfairDisplay;
+  font-weight: 700;
+  text-align: left;
+  text-transform: capitalize;
+  text-transform: lowercase;
+  position: absolute; }
+
+.footer-co-info .company-info-info p {
+  color: #747474;
+  text-transform: capitalize; }
+
+.footer-co-info .company-vision p {
+  color: #747474; }
+
+.quick-links h3 {
+  font-size: 1.8rem;
+  font-family: Source Sans Pro;
+  text-align: left;
+  line-height: 32px;
+  letter-spacing: 0.4px;
+  color: white;
+  margin-bottom: 30px; }
+
+.quick-links li {
+  margin: 10px 0; }
+
+.quick-links a {
+  font-size: 1.6rem;
+  font-family: Poppins;
+  font-weight: 400;
+  text-align: left;
+  text-transform: capitalize;
+  letter-spacing: 0.4px;
+  color: #747474;
+  text-transform: capitalize; }
+
+.quick-links a:hover {
+  color: #2f87fd; }
+
+.latest-news h3 {
+  font-size: 1.8rem;
+  font-family: Poppins;
+  font-weight: 700;
+  text-align: left;
+  text-transform: capitalize;
+  color: white;
+  margin-bottom: 30px; }
+
+.latest-news .link-news p, .latest-news .link-news a {
+  font-size: 1.5rem;
+  font-family: Poppins;
+  font-weight: 400;
+  text-align: left;
+  text-transform: capitalize;
+  color: #747474;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
+
+.latest-news .link-news a:hover {
+  color: #2f87fd; }
+
 .top-nav {
   background: #f5f5f5;
   padding: 10px; }
@@ -354,9 +472,13 @@ p {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
+  .contact-info .contact-info-phone {
+    -ms-flex-preferred-size: 35%;
+    flex-basis: 35%; }
   .contact-info .contact-info-img {
     -ms-flex-preferred-size: 23%;
-    flex-basis: 23%; }
+    flex-basis: 23%;
+    margin-right: 10px; }
 
 .accounts {
   -ms-flex-preferred-size: 40%;
@@ -385,7 +507,8 @@ select {
 .company-info {
   padding: 20px 0; }
   .company-info .company-info-img {
-    width: 30px; }
+    width: 30px;
+    margin-right: 10px; }
   .company-info .company-info-logo {
     -webkit-box-align: start;
     -ms-flex-align: start;
@@ -433,7 +556,10 @@ select {
 
 .banner {
   position: relative;
-  background: url(../images/photos/paul-bence-395888.png) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.4))), url(../images/photos/paul-bence-395888.png) no-repeat;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.4)), url(../images/photos/paul-bence-395888.png) no-repeat;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.4)), url(../images/photos/paul-bence-395888.png) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.4)), url(../images/photos/paul-bence-395888.png) no-repeat;
   background-size: cover;
   height: 650px;
   background-position: center;
@@ -450,15 +576,32 @@ select {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  .banner .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: rgba(1, 22, 50, 0.45); }
   .banner .banner-content {
     width: 70%; }
+  .banner .banner-nav {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%; }
+    .banner .banner-nav .arrow {
+      height: 59px;
+      width: 59px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 90px;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
+    .banner .banner-nav .arrow:hover {
+      background: rgba(0, 0, 0, 0.7); }
+    .banner .banner-nav .arrow:hover i {
+      color: #2f87fd; }
+
+.half {
+  margin-bottom: 20px; }
 
 .third {
   width: 32%; }
@@ -542,13 +685,12 @@ select {
     padding: 30px;
     min-height: 300px; }
 
-.services-title {
-  padding: 15px; }
-  .services-title h3, .services-title h2 {
-    z-index: 2; }
-  .services-title h6 {
-    z-index: 1;
-    color: white; }
+.services-title h3, .services-title h2 {
+  z-index: 2; }
+
+.services-title h6 {
+  z-index: 1;
+  color: white; }
 
 .services .third {
   display: -webkit-box;
@@ -614,8 +756,8 @@ select {
     flex-basis: 80%; }
 
 .credentials {
-  background: #1f2329;
-  margin: 30px 0; }
+  margin: 30px 0;
+  background: #1f2329; }
   .credentials .outer-wrapper {
     -ms-flex-pack: distribute;
     justify-content: space-around; }
@@ -645,17 +787,95 @@ select {
   margin: 100px 0; }
   .news .news-title {
     position: relative; }
-  .news .news-details h3 {
-    -ms-flex-preferred-size: 85%;
-    flex-basis: 85%; }
+  .news .news-details {
+    margin-bottom: 80px; }
+    .news .news-details h3 {
+      -ms-flex-preferred-size: 85%;
+      flex-basis: 85%; }
+  .news .news-article .news-img {
+    margin-bottom: 30px; }
+  .news .news-article h3 {
+    margin-bottom: 20px; }
 
 .partners {
   background: #2f87fd; }
   .partners .wrapper {
-    padding: 10px; }
+    padding: 30px; }
 
 footer {
   background: #1f2329; }
+  footer .wrapper {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+
+.footer-contact {
+  margin-bottom: 50px; }
+  .footer-contact .foot-contact-info {
+    background: #313030;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    bottom: 20px; }
+  .footer-contact .footer-contact-accent {
+    color: #424141;
+    width: 95%;
+    height: 20px;
+    margin: 0 auto; }
+
+.footer-co-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-preferred-size: 40%;
+  flex-basis: 40%; }
+  .footer-co-info .company-info-img {
+    margin-right: 20px; }
+  .footer-co-info .footer-logo {
+    margin-bottom: 30px; }
+  .footer-co-info form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .footer-co-info form label {
+      color: #2f87fd; }
+
+.quick-links {
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%; }
+
+.latest-news {
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%; }
+  .latest-news button {
+    color: #2f87fd; }
+  .latest-news .link-news p {
+    padding-bottom: 20px; }
+  .latest-news .link-news button i {
+    color: white;
+    margin-right: 5px; }
+  .latest-news .link-news:nth-of-type(2) {
+    padding-top: 20px;
+    border-top: 1px solid #747474;
+    margin: 30px 0; }
+
+.copyright {
+  margin-top: 100px; }
+  .copyright .wrapper {
+    border-top: 1px solid #747474; }
+  .copyright p {
+    color: #747474; }
 
 button {
   padding: 10px;
@@ -668,10 +888,10 @@ button {
   button i {
     color: white; }
 
-.transparent, .about-us .free-consult button {
+.transparent, .about-us .free-consult button, .news .news-details button, .latest-news button {
   background: none;
   color: #2f87fd; }
-  .transparent i, .about-us .free-consult button i {
+  .transparent i, .about-us .free-consult button i, .news .news-details button i, .latest-news button i {
     color: #2f87fd; }
 
 img {
