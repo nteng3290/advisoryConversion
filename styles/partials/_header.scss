@@ -13,11 +13,8 @@
         @extend .flex;
         align-items: center;
     }
-    .contact-info-phone img{
-        width: 20px;
-    }
-    .contact-info-mail img{
-        width: 30px;
+    .contact-info-img{
+        flex-basis: 23%;
     }
 }
 .accounts{
@@ -53,15 +50,19 @@ select{
     .company-info-img{
             width: 30px;
     }
-    .company-info-info span{
-        color: $primary;
+    .company-info-logo{
+        @extend .flex;
+        align-items: flex-start; 
+        flex-basis: 20%; 
     }
-    .company-info-logo,
     .company-info-item{
         @extend .flex;
+        align-items: flex-start;
+        flex-basis: 40%;
         .company-info-office,
         .company-info-open{
             @extend .flex;
+            align-items: flex-start;
         }
     }
     button{
@@ -94,9 +95,6 @@ select{
     .page-nav-social{
         flex-basis: 15%;
     }
-    a{
-        color: white;
-    }
 }
 .banner{
     position: relative;
@@ -106,10 +104,10 @@ select{
         bottom: 0;
         right:0;
         left: 0;
-        background: rgba(0,0,0,0.4);
+        background: rgba(1, 22, 50, 0.45);
     }
     background: url(../images/photos/paul-bence-395888.png) no-repeat;
-    // background-size: contain;
+    background-size: cover;
     height: 650px;
     background-position: center;
     display: flex;

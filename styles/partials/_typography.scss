@@ -1,25 +1,42 @@
-h1,h2,h3,h4,h5,p{
+*{
+    color: $font-color;
+    font-size: 10px;
+}
+h1,h2,h3,h4,h5,h6,p{
     margin: 0;
 }
 h1{
-    @include serif-headings(71px);
-    text-transform: capitalize;
+    @include serif-headings(7.1rem);
     color: white;
 }
 h2{
-    @include serif-headings(45px);
-    text-transform: capitalize;
-    color: $font-color;
+    @include serif-headings(4.5rem);
 }
 h3{
-    @include serif-headings(20px);
-    text-transform: capitalize;
+    @include serif-headings(2rem);
 }
 h4{
-    @include sans-headings(22px);
+    @include sans-headings(2.2rem);
+}
+h5{
+    @include sans-headings (1.8rem);
+}
+h6{
+    @include serif-headings(27rem);
+    text-transform: capitalize;
+    position: absolute;
+    color: $text-design;
+    top: -91px;
+    left: 500px;
+    z-index: -1;
 }
 p{
-    @include p-text(16px);
+    @include p-text(1.6rem);
+}
+.contact-info{
+    a{
+        font-size: 1.4rem;
+    }
 }
 .accounts{
     .account-items{
@@ -29,13 +46,48 @@ p{
         }
     }
 }
+.company-info{
+    .company-info-info{
+        h3{
+            font-size: 3.2rem;
+        }
+        position: relative; 
+        span{
+        color: $primary;
+        text-transform: lowercase;
+        font-size: 3.2rem;
+        position: absolute;
+        }
+        h4{
+            font-size: 1.8rem;
+            text-transform: capitalize;
+        }
+        p{
+            color: $p-color;
+            text-transform: capitalize;
+        }
+    }
+}
 .page-nav{
     text-transform: uppercase;
+    font-size: 1.8rem;
     .page-nav-menu li:nth-of-type(7){
         text-transform: capitalize;
     }
+    .page-nav-menu a,
+    .page-nav-social a{
+        color: white;
+    }
+}
+.banner-content{
+    p{
+        color: white;
+    }        
 }
 .about-us{
+    h3{
+        color: $primary;
+    }
     .co-description{
         h2{
             text-transform: none;
@@ -48,7 +100,72 @@ p{
     }
     .free-consult{
         h3{
-            margin: 10px 0;
+            color: $font-color;
+            margin: 10px 0 60px 0;
         }
+    }
+}
+.rational{
+    .rationals-content{
+        h2{
+            position: relative;
+        }
+        h2:after{
+            content: "";
+            display: inline-block;
+            width: 80px;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            border-bottom: 2px solid $primary;  
+        }
+        h5{
+            font-family: $sans-highlights;
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: $primary;
+            margin: 100px 0 35px 0;
+        }
+    }
+}
+.credentials{
+    .credential{
+        h4{
+        color: white;
+        text-transform: capitalize;
+        }
+        h3{
+            color: $primary;
+            @include sans-highlights(4rem);
+        }
+    }
+}
+.services-title,
+.projects-title,
+.news-title{
+    margin-bottom: 50px;
+    h2{
+        color: $primary;
+        position: relative;
+        &:after{
+            content: "";
+            display: inline-block;
+            width: 60px;
+            position: absolute;
+            top: 62px;
+            left: 152px;
+            border-bottom: 2px solid $primary;
+        }
+    }
+    h2,h3{
+        text-align:center;
+        display: inline-block;
+        width: 33.33%;
+    }
+}
+.vp-statement{
+    p,h4{
+        text-align: center;
+        color: white;
     }
 }

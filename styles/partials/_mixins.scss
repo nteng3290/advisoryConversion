@@ -3,17 +3,27 @@
     font-family: PlayfairDisplay;
     font-weight: 700;
     text-align: left;
+    text-transform: capitalize;
 }
 @mixin sans-headings($sizeValue){
     font-size: $sizeValue;
-    font-family: $sans-p;
+    font-family: $sans-text;
     font-weight: 700;
     text-align: left; 
+    text-transform: capitalize;
 }
 @mixin p-text($sizeValue){
     font-size: $sizeValue;
-    font-family: $sans-p;
+    font-family: $sans-text;
     text-align: left; 
     line-height: 32px;
+    letter-spacing: 0.4px;
+}
+@mixin sans-highlights($sizeValue){
+    font-size: $sizeValue;
+    font-family: $sans-highlights;
+    font-weight: 700;
+    text-align: left; 
+    text-transform: capitalize;
 }
 

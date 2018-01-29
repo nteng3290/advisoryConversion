@@ -1,9 +1,6 @@
 .flex, .top-nav .wrapper, .contact-info, .contact-info .contact-info-phone,
-.contact-info .contact-info-mail, .accounts, .accounts .translate, .accounts .account-items, .company-info .wrapper, .company-info .company-info-logo,
-.company-info .company-info-item, .company-info .company-info-logo .company-info-office,
-.company-info .company-info-logo .company-info-open,
-.company-info .company-info-item .company-info-office,
-.company-info .company-info-item .company-info-open, .page-nav .wrapper, .page-nav ul, .page-nav ul li, .half, .about-us .about-us-stuff, .rational .rational-script, .rational .rationals, .credentials, .projects .projects-detail, .statement .wrapper, .news .news-details, .partners .wrapper {
+.contact-info .contact-info-mail, .accounts, .accounts .translate, .accounts .account-items, .company-info .wrapper, .company-info .company-info-logo, .company-info .company-info-item, .company-info .company-info-item .company-info-office,
+.company-info .company-info-item .company-info-open, .page-nav .wrapper, .page-nav ul, .page-nav ul li, .half, .about-us .about-us-stuff, .rational .rational-script, .rational .rationals, .rational .rationals .rational-title, .credentials .outer-wrapper, .projects .projects-detail, .statement .wrapper, .news .news-details, .partners .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,6 +14,22 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+
+.title-flourish, .services-title, .projects .projects-title, .news .news-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
@@ -152,11 +165,15 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-h1, h2, h3, h4, h5, p {
+* {
+  color: #272626;
+  font-size: 10px; }
+
+h1, h2, h3, h4, h5, h6, p {
   margin: 0; }
 
 h1 {
-  font-size: 71px;
+  font-size: 7.1rem;
   font-family: PlayfairDisplay;
   font-weight: 700;
   text-align: left;
@@ -164,41 +181,91 @@ h1 {
   color: white; }
 
 h2 {
-  font-size: 45px;
+  font-size: 4.5rem;
   font-family: PlayfairDisplay;
   font-weight: 700;
   text-align: left;
-  text-transform: capitalize;
-  color: #272626; }
+  text-transform: capitalize; }
 
 h3 {
-  font-size: 20px;
+  font-size: 2rem;
   font-family: PlayfairDisplay;
   font-weight: 700;
   text-align: left;
   text-transform: capitalize; }
 
 h4 {
-  font-size: 22px;
+  font-size: 2.2rem;
   font-family: Source Sans Pro;
   font-weight: 700;
-  text-align: left; }
+  text-align: left;
+  text-transform: capitalize; }
+
+h5 {
+  font-size: 1.8rem;
+  font-family: Source Sans Pro;
+  font-weight: 700;
+  text-align: left;
+  text-transform: capitalize; }
+
+h6 {
+  font-size: 27rem;
+  font-family: PlayfairDisplay;
+  font-weight: 700;
+  text-align: left;
+  text-transform: capitalize;
+  text-transform: capitalize;
+  position: absolute;
+  color: #f6f3f3;
+  top: -91px;
+  left: 500px;
+  z-index: -1; }
 
 p {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-family: Source Sans Pro;
   text-align: left;
-  line-height: 32px; }
+  line-height: 32px;
+  letter-spacing: 0.4px; }
+
+.contact-info a {
+  font-size: 1.4rem; }
 
 .accounts .account-items {
   text-transform: capitalize; }
   .accounts .account-items .selected {
     border-bottom: 1px solid #272626; }
 
+.company-info .company-info-info {
+  position: relative; }
+  .company-info .company-info-info h3 {
+    font-size: 3.2rem; }
+  .company-info .company-info-info span {
+    color: #2f87fd;
+    text-transform: lowercase;
+    font-size: 3.2rem;
+    position: absolute; }
+  .company-info .company-info-info h4 {
+    font-size: 1.8rem;
+    text-transform: capitalize; }
+  .company-info .company-info-info p {
+    color: #747474;
+    text-transform: capitalize; }
+
 .page-nav {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-size: 1.8rem; }
   .page-nav .page-nav-menu li:nth-of-type(7) {
     text-transform: capitalize; }
+  .page-nav .page-nav-menu a,
+  .page-nav .page-nav-social a {
+    color: white; }
+
+.banner-content p {
+  color: white; }
+
+.about-us h3 {
+  color: #2f87fd; }
 
 .about-us .co-description h2 {
   text-transform: none;
@@ -209,7 +276,71 @@ p {
   line-height: 36px; }
 
 .about-us .free-consult h3 {
-  margin: 10px 0; }
+  color: #272626;
+  margin: 10px 0 60px 0; }
+
+.rational .rationals-content h2 {
+  position: relative; }
+
+.rational .rationals-content h2:after {
+  content: "";
+  display: inline-block;
+  width: 80px;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  border-bottom: 2px solid #2f87fd; }
+
+.rational .rationals-content h5 {
+  font-family: Poppins;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #2f87fd;
+  margin: 100px 0 35px 0; }
+
+.credentials .credential h4 {
+  color: white;
+  text-transform: capitalize; }
+
+.credentials .credential h3 {
+  color: #2f87fd;
+  font-size: 4rem;
+  font-family: Poppins;
+  font-weight: 700;
+  text-align: left;
+  text-transform: capitalize; }
+
+.services-title,
+.projects-title,
+.news-title {
+  margin-bottom: 50px; }
+  .services-title h2,
+  .projects-title h2,
+  .news-title h2 {
+    color: #2f87fd;
+    position: relative; }
+    .services-title h2:after,
+    .projects-title h2:after,
+    .news-title h2:after {
+      content: "";
+      display: inline-block;
+      width: 60px;
+      position: absolute;
+      top: 62px;
+      left: 152px;
+      border-bottom: 2px solid #2f87fd; }
+  .services-title h2, .services-title h3,
+  .projects-title h2,
+  .projects-title h3,
+  .news-title h2,
+  .news-title h3 {
+    text-align: center;
+    display: inline-block;
+    width: 33.33%; }
+
+.vp-statement p, .vp-statement h4 {
+  text-align: center;
+  color: white; }
 
 .top-nav {
   background: #f5f5f5;
@@ -223,10 +354,9 @@ p {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-  .contact-info .contact-info-phone img {
-    width: 20px; }
-  .contact-info .contact-info-mail img {
-    width: 30px; }
+  .contact-info .contact-info-img {
+    -ms-flex-preferred-size: 23%;
+    flex-basis: 23%; }
 
 .accounts {
   -ms-flex-preferred-size: 40%;
@@ -256,8 +386,23 @@ select {
   padding: 20px 0; }
   .company-info .company-info-img {
     width: 30px; }
-  .company-info .company-info-info span {
-    color: #2f87fd; }
+  .company-info .company-info-logo {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 20%; }
+  .company-info .company-info-item {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-preferred-size: 40%;
+    flex-basis: 40%; }
+    .company-info .company-info-item .company-info-office,
+    .company-info .company-info-item .company-info-open {
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; }
   .company-info button {
     text-transform: uppercase;
     background: none;
@@ -286,12 +431,10 @@ select {
   -ms-flex-preferred-size: 15%;
   flex-basis: 15%; }
 
-.page-nav a {
-  color: white; }
-
 .banner {
   position: relative;
   background: url(../images/photos/paul-bence-395888.png) no-repeat;
+  background-size: cover;
   height: 650px;
   background-position: center;
   display: -webkit-box;
@@ -313,7 +456,7 @@ select {
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.4); }
+    background: rgba(1, 22, 50, 0.45); }
   .banner .banner-content {
     width: 70%; }
 
@@ -321,7 +464,7 @@ select {
   width: 32%; }
 
 .fourth {
-  width: 25%; }
+  width: 23%; }
 
 .projects-img,
 .news-article {
@@ -336,20 +479,64 @@ select {
   justify-content: space-between; }
 
 .about-us {
-  margin: 50px; }
+  margin: 50px 0;
+  background: url(../images/icons/Ellipse-left.png) no-repeat;
+  background-size: 157px; }
+  .about-us h3 {
+    margin-bottom: 25px; }
+  .about-us .about-us-stuff {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
   .about-us .co-description {
-    -ms-flex-preferred-size: 70%;
-    flex-basis: 70%; }
+    -ms-flex-preferred-size: 62%;
+    flex-basis: 62%; }
+    .about-us .co-description button {
+      margin-top: 100px; }
   .about-us .free-consult {
     background: #f5f5f5;
-    border-right: 1px solid #2f87fd;
-    -ms-flex-preferred-size: 20%;
-    flex-basis: 20%;
-    padding: 20px; }
+    border-right: 1px solid transparent;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    padding: 30px;
+    position: relative; }
+    .about-us .free-consult p {
+      margin-bottom: 10px; }
+    .about-us .free-consult button {
+      margin: 20px 0;
+      -webkit-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
+    .about-us .free-consult h3 {
+      -webkit-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
+    .about-us .free-consult:hover h3 {
+      color: #2f87fd; }
+    .about-us .free-consult:hover button {
+      outline: 2px solid #2f87fd; }
+    .about-us .free-consult:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 2px;
+      height: 0;
+      background: transparent;
+      -webkit-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+    .about-us .free-consult:hover:after {
+      width: 2px;
+      height: 100%;
+      background: #2f87fd; }
 
 .services {
-  background: #f5f5f5;
-  padding: 50px 0; }
+  background: #f5f5f5 url(../images/icons/Ellipse-right.png) no-repeat;
+  background-position: bottom right;
+  background-size: 157px;
+  padding: 100px 0; }
   .services .third {
     background: white;
     padding: 30px;
@@ -358,7 +545,10 @@ select {
 .services-title {
   padding: 15px; }
   .services-title h3, .services-title h2 {
-    text-align: center; }
+    z-index: 2; }
+  .services-title h6 {
+    z-index: 1;
+    color: white; }
 
 .services .third {
   display: -webkit-box;
@@ -379,19 +569,67 @@ select {
 
 .rational {
   margin: 50px; }
+  .rational .rational-script {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-bottom: 50px; }
+    .rational .rational-script .rationals-content {
+      -ms-flex-preferred-size: 50%;
+      flex-basis: 50%; }
+    .rational .rational-script .rationals-image {
+      -ms-flex-preferred-size: 45%;
+      flex-basis: 45%; }
   .rational .rationals .third {
-    border: 1px solid grey; }
+    border: 1px solid #f5f5f5;
+    padding: 30px;
+    min-height: 170px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    position: relative; }
+    .rational .rationals .third:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 0;
+      background: transparent;
+      -webkit-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+    .rational .rationals .third:hover:before {
+      width: 2px;
+      height: 100%;
+      background: #2f87fd; }
+    .rational .rationals .third:hover h5 {
+      color: #2f87fd; }
+  .rational .rationals .rational-title {
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  .rational .rationals .rational-title h5 {
+    -ms-flex-preferred-size: 80%;
+    flex-basis: 80%; }
 
 .credentials {
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
   background: #1f2329;
   margin: 30px 0; }
+  .credentials .outer-wrapper {
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
   .credentials .fourth {
-    color: white; }
+    padding: 50px; }
+    .credentials .fourth:not(:last-child) {
+      border-right: 1px solid #2f87fd; }
 
-.projects .projects-title h2, .projects .projects-title h3 {
-  text-align: center; }
+.projects {
+  margin: 100px 0; }
+  .projects .projects-title {
+    position: relative; }
+  .projects .projects-detail {
+    margin: 30px 0; }
 
 .statement {
   background: #2f87fd;
@@ -400,16 +638,16 @@ select {
     -ms-flex-preferred-size: 35%;
     flex-basis: 35%; }
   .statement .wrapper .vp-statement {
-    text-align: center;
     -ms-flex-preferred-size: 60%;
     flex-basis: 60%; }
 
-.news .news-title h2, .news .news-title h3 {
-  text-align: center; }
-
-.news .news-details h3 {
-  -ms-flex-preferred-size: 85%;
-  flex-basis: 85%; }
+.news {
+  margin: 100px 0; }
+  .news .news-title {
+    position: relative; }
+  .news .news-details h3 {
+    -ms-flex-preferred-size: 85%;
+    flex-basis: 85%; }
 
 .partners {
   background: #2f87fd; }
@@ -424,14 +662,24 @@ button {
   background: #2f87fd;
   border: none;
   color: white;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-style: Source Sans Pro; }
+  button i {
+    color: white; }
 
 .transparent, .about-us .free-consult button {
   background: none;
   color: #2f87fd; }
+  .transparent i, .about-us .free-consult button i {
+    color: #2f87fd; }
 
 img {
   max-width: 100%; }
+
+.outer-wrapper {
+  max-width: 1920px;
+  margin: 0 auto; }
 
 .wrapper {
   max-width: 1170px;

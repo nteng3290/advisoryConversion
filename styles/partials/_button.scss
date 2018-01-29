@@ -4,8 +4,16 @@ button{
     border: none;
     color: white;
     text-transform: capitalize;
+    font-size: 1.6rem;
+    font-style: $sans-text;
+    i{
+        color: white;
+    }
 }
 .transparent{
     background: none;
     color: $primary;
+    i{
+        color: $primary;
+    }
 }
