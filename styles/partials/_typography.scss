@@ -8,6 +8,12 @@ h1,h2,h3,h4,h5,h6,p{
 h1{
     @include serif-headings(7.1rem);
     color: white;
+    @media (max-width: 940px) {
+        font-size: 5.5rem;
+    }
+    @media (max-width: 480px) {
+        font-size: 3rem;
+    }
 }
 h2{
     @include serif-headings(4.5rem);
@@ -29,6 +35,9 @@ h6{
     text-align: center;
     top: -91px;
     z-index: -1;
+    @media (max-width: 480px) {
+        top: -122px;
+    }
 }
 p{
     @include p-text(1.6rem);
@@ -36,6 +45,9 @@ p{
 .contact-info{
     a{
         font-size: 1.4rem;
+        @media (max-width: 940px) {
+            font-size: 1.2rem;
+        }
     }
     a:hover{
         color: $primary;
@@ -48,31 +60,35 @@ p{
     text-transform: capitalize;
     a{
         font-size: 1.4rem;
+        @media (max-width: 480px) {
+            font-size: 1.2rem;
+        }
     }
     a:hover{
         color: $primary;
         border-bottom: 2px solid $primary;
     }
 }
-.company-info{
-    .company-info-info{
-        h3{
-            font-size: 3.2rem;
-        }
-        position: relative; 
-        span{
-        color: $primary;
-        text-transform: lowercase;
+.company-info-info{
+    h3{
         font-size: 3.2rem;
-        position: absolute;
-        }
-        h4{
-            font-size: 1.8rem;
-            text-transform: capitalize;
-        }
-        p{
-            color: $p-color;
-            text-transform: capitalize;
+    }
+    position: relative; 
+    span{
+    color: $primary;
+    text-transform: lowercase;
+    font-size: 3.2rem;
+    position: absolute;
+    }
+    h4{
+        font-size: 1.8rem;
+        text-transform: capitalize;
+    }
+    p{
+        color: $p-color;
+        text-transform: capitalize;
+        @media (max-width: 940px) {
+            font-size: 1.2rem;
         }
     }
 }
@@ -86,6 +102,9 @@ p{
         @media (max-width: 940px) {
             font-size: 1.4rem;
         }
+        @media (max-width: 480px) {
+            font-size: 1rem;
+        }
     }
     .page-nav-menu a,
     .page-nav-icons i,
@@ -93,12 +112,19 @@ p{
         color: white;
     }
 }
+.hamburger{
+    i{
+        color: white;
+        font-size: 2rem;
+    }
+}
 .banner-content{
     p{
         color: white;
         margin: 40px 0 60px 0;
         @media (max-width: 940px) {
-            margin-bottom:30px;
+           margin: 20px 0;
+           font-size: 1.4rem;
         } 
     }      
 }
@@ -113,9 +139,14 @@ p{
 .about-us{
     h3{
         color: $primary;
+        margin-bottom: 25px;
         @media (max-width: 940px) {
             text-align: center;
-            margin-left: 142px; 
+            margin-left: 100px; 
+        }
+        @media (max-width: 480px) {
+            margin-left: 0;
+            text-align: right;
         }
     }
     .co-description{
@@ -198,7 +229,11 @@ p{
     h2,h3{
         text-align:center;
         display: inline-block;
-        width: 33.33%;
+    }
+}
+.service-details{
+    h4,p{
+        text-align: center;
     }
 }
 .vp-statement{
@@ -211,7 +246,8 @@ p{
         @include sans-highlights-p(2.1rem);
         text-align: center;
         @media (max-width: 940px) {
-            font-size: 1.6rem;
+            font-size: 1.2rem;
+            margin-bottom: 75px;
         }
     }
     p:last-of-type{
@@ -231,32 +267,33 @@ p{
         top:-141%;
     }
 }
-.news{
-    .news-details{
-        h3{
-            @include sans-highlights-p (2rem);
-            line-height: 37px;
-            text-transform: none
+.news-details{
+    h3{
+        @include sans-highlights-p (2rem);
+        line-height: 37px;
+        text-transform: none;
+        @media (max-width: 768px) {
+          font-size: 1.8rem;  
         }
     }
-    .news-content{
-        h3{
-            @include sans-highlights (1.8rem);
-            color: $primary;
-        }
-        p{
-            @include sans-highlights-p (1.6rem);
-            text-transform: none;
-            line-height: 32px;
-            letter-spacing: 0.4px;
-        }
-        p:last-of-type{
-            color: $primary;
-        }
-        h3,p{
-            @media (max-width: 940px) {
-                font-size: 1.4rem;
-            }
+}
+.news-content{
+    h3{
+        @include sans-highlights (1.8rem);
+        color: $primary;
+    }
+    p{
+        @include sans-highlights-p (1.6rem);
+        text-transform: none;
+        line-height: 32px;
+        letter-spacing: 0.4px;
+    }
+    p:last-of-type{
+        color: $primary;
+    }
+    h3,p{
+        @media (max-width: 940px) {
+            font-size: 1.4rem;
         }
     }
 }

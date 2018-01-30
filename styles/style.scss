@@ -10,9 +10,9 @@ $bg-color: #f5f5f5; //Offwhite
 $font-color:rgba(39, 39, 39, 0.7); //Black
 $p-color: #747474; //DarkGrey
 $text-design: #f6f3f3; //light light grey
-$serif-heading: PlayfairDisplay;
-$sans-highlights: Poppins;
-$sans-text:Source Sans Pro;
+$serif-heading: 'Playfair Display', serif;
+$sans-highlights: 'Poppins', sans-serif;
+$sans-text:'Source Sans Pro', sans-serif;
 
 .flex{
     display: flex;
@@ -50,8 +50,9 @@ img{
 .wrapper{
     max-width: 1170px;
     margin: 0 auto;
-    @media (max-width: 940px) {
-        width: 96%;
+    width: 90%;
+    @media (max-width: 480px) {
+        width: 93%;
     }
 }
 ul{

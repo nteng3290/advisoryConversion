@@ -4,12 +4,21 @@
     .wrapper{
         @extend .flex;
     }
+    @media (max-width: 768px) {
+        padding: 10px 0;
+    }
 }
 .contact-info{
     @extend .flex;
     flex-basis: 35%;
     @media (max-width: 940px) {
         flex-basis: 45%;
+    }
+    @media (max-width: 768px) {
+        flex-basis: 48%;
+    }
+    @media (max-width: 480px) {
+        flex-basis: 34%;
     }
     .contact-info-phone,
     .contact-info-mail{
@@ -37,11 +46,28 @@
         @media (max-width: 940px) {
             flex-basis: 20%;
         }
+        @media (max-width: 480px) {
+            flex-basis: 50%;
+        }
+    }
+    a{
+        @media (max-width: 480px) {
+            display: none;
+        }
     }
 }
 .accounts{
     @extend .flex;
     flex-basis: 40%;
+    @media (max-width: 940px) {
+        flex-basis: 45%;
+    }
+    @media (max-width: 768px) {
+        flex-basis: 50%;
+    }
+    @media (max-width: 480px) {
+        flex-basis: 60%;
+    }
     .translate-icon{
         width: 20px;
     }
@@ -51,7 +77,14 @@
     }
     .account-items{
         @extend .flex;
-        flex-basis: 60%;
+            flex-basis: 60%;
+        @media (max-width: 768px) {
+            flex-basis: 65%;
+        }
+        @media (max-width: 480px) {
+            flex-direction:column;
+            align-items: flex-end;
+        }
     }
 }
 select{
@@ -68,6 +101,9 @@ select{
     padding: 20px 0;
     .wrapper{
         @extend .flex;
+        @media (max-width: 480px) {
+            flex-direction: column
+        }
     }
     .company-info-img{
         width: 30px;
@@ -76,7 +112,10 @@ select{
     .company-info-logo{
         @extend .flex;
         align-items: flex-start; 
-        flex-basis: 20%; 
+        flex-basis: 20%;
+        @media (max-width: 940px) {
+            flex-basis: 25%;
+        } 
     }
     .company-info-item{
         @extend .flex;
@@ -98,11 +137,13 @@ select{
         align-self: center;
         color: $primary;
         @media (max-width: 940px) {
-            margin-right: 10px;
+            flex-basis: 20%;
+            font-size: 1.2rem;
         }
     }
 }
 .page-nav{
+    position: relative;
     @media (max-width: 940px) {
        background: $primary;
     }
@@ -120,18 +161,58 @@ select{
     .page-nav-menu{
         padding: 10px;
         flex-basis: 70%;
+        @media (max-width: 768px) {
+            position: absolute;
+            width: 100%;
+            top: 52px;
+            left: 0;
+            z-index: 1;
+            background: $primary;
+            border-top: 1px solid white;
+            transition: all 1s ease-in-out;
+        }
     }
     .page-nav-icons{
         padding: 10px 0;
         flex-basis: 10%;
         height: 100%;
         border-right: 1px solid white;
+        @media (max-width: 480px) {
+            flex-basis: 20%;
+        }
+    }
+    .page-nav-icons li:first-of-type{
+        position: relative;
+    }
+    .page-nav-icons li:first-of-type::after{
+        content: "2";
+        background: #2d71cd;
+        color: white;
+        border-radius: 50%;
+        padding: 1px 5px;
+        position: absolute;
+        right: -18%;
+        top: 60%;
     }
     .page-nav-social{
         padding: 10px 0;
         flex-basis: 15%;
+        @media (max-width: 480px) {
+            flex-basis: 25%;
+            align-content: flex-end;
+        }
     }
 }
+.hamburger{
+    display: none;
+}
+@media (max-width: 768px) {
+    .hamburger{
+        display: block;
+        flex-basis: 50%;
+    }
+}
+
 .banner{
     position: relative;
     background: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.4) ),  url(../images/photos/paul-bence-395888.png) no-repeat;
@@ -143,13 +224,14 @@ select{
     justify-content: center;
     align-items: center; 
     @media (max-width: 940px) {
-        background-size: contain;
-        height: 410px;
+        background-size: cover;
+        height: 340px;
     } 
     .banner-content{
         width: 70%;
         @media (max-width: 940px) {
-        margin:0 auto;
+            margin:0 auto;
+            width: 80%;
         } 
     }
     .banner-nav{

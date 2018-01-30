@@ -1,6 +1,6 @@
 @mixin serif-headings($sizeValue){
     font-size: $sizeValue;
-    font-family: PlayfairDisplay;
+    font-family: $serif-heading;
     font-weight: 700;
     text-align: left;
     text-transform: capitalize;
