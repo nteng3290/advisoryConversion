@@ -18,6 +18,10 @@
     margin: 50px 0;
     background: url(../images/icons/Ellipse-left.png) no-repeat;
     background-size: 157px;
+    @media (max-width: 940px) {
+            background-size: 120px;
+            background-position: top left;
+        }
     h3{
         margin-bottom: 25px;
     }
@@ -27,8 +31,11 @@
     }
     .co-description{
         flex-basis: 62%;
-        button{
-            margin-top:100px;
+    }
+    .co-description button{
+        margin-top:100px;
+        @media (max-width: 940px) {
+            margin-top:92px;
         }
     }
     .free-consult{
@@ -37,6 +44,9 @@
         flex-basis: 25%;
         padding: 30px;
         position: relative;
+        @media (max-width: 940px) {
+            flex-basis: 30%;
+            }
         p{
             margin-bottom: 10px;
         }
@@ -110,12 +120,18 @@
         @extend .flex;
         align-items: flex-start;
         margin-bottom: 50px;
-        .rationals-content{
-            flex-basis: 50%;
+        @media (max-width: 940px) {
+           display: flex;
+           flex-direction: column-reverse;
+           align-content: flex-start;
+           
         }
-        .rationals-image{
-            flex-basis: 45%;
-        }
+    }
+    .rationals-content{
+        flex-basis: 50%;
+    }
+    .rational-image{
+        flex-basis: 45%;
     }
     .rationals{
         @extend .flex;
@@ -178,6 +194,11 @@
         @extend .flex;
         margin: 30px 0;
     }
+    .projects-detail p{
+        @media (max-width: 940px) {
+            flex-basis: 80%;
+        }
+    }
 }
 .statement{ 
     background: $primary;
@@ -188,6 +209,10 @@
             flex-basis: 35%;
         } 
         .vp-statement{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             flex-basis: 60%;
         }     
     }

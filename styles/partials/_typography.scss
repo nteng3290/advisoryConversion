@@ -26,8 +26,8 @@ h6{
     text-transform: capitalize;
     position: absolute;
     color: $text-design;
+    text-align: center;
     top: -91px;
-    left: 500px;
     z-index: -1;
 }
 p{
@@ -37,14 +37,21 @@ p{
     a{
         font-size: 1.4rem;
     }
+    a:hover{
+        color: $primary;
+    }
+}
+.translate{
+    font-size: 1.4rem;
 }
 .account-items{
     text-transform: capitalize;
-        li{
-            font-size: 1.8rem;
-        }
-    .selected{
-        border-bottom: 1px solid $font-color;
+    a{
+        font-size: 1.4rem;
+    }
+    a:hover{
+        color: $primary;
+        border-bottom: 2px solid $primary;
     }
 }
 .company-info{
@@ -71,12 +78,18 @@ p{
 }
 .page-nav{
     text-transform: uppercase;
-    font-size: 1.8rem;
     .page-nav-menu li:nth-of-type(7){
         text-transform: capitalize;
     }
+    li a{
+        font-size: 1.6rem;
+        @media (max-width: 940px) {
+            font-size: 1.4rem;
+        }
+    }
     .page-nav-menu a,
-    .page-nav-social a{
+    .page-nav-icons i,
+    .page-nav-social i{
         color: white;
     }
 }
@@ -84,7 +97,10 @@ p{
     p{
         color: white;
         margin: 40px 0 60px 0;
-    }        
+        @media (max-width: 940px) {
+            margin-bottom:30px;
+        } 
+    }      
 }
 .banner-nav{
     .arrow{
@@ -97,15 +113,25 @@ p{
 .about-us{
     h3{
         color: $primary;
+        @media (max-width: 940px) {
+            text-align: center;
+            margin-left: 142px; 
+        }
     }
     .co-description{
         h2{
             text-transform: none;
             margin-bottom: 20px;
+            @media (max-width: 940px) {
+                text-align: right;
+            }
         }
         p{
             margin: 20px 0;
             line-height: 36px;
+            @media (max-width: 940px) {
+                text-align: right;
+            }
         }
     }
     .free-consult{
@@ -125,13 +151,14 @@ p{
             display: inline-block;
             width: 80px;
             position: absolute;
-            top: 100px;
             left: 0;
+            bottom: -77%;
             border-bottom: 2px solid $primary;  
         }
         h5{
             font-family: $sans-highlights;
             font-size: 1.8rem;
+            text-transform: none;
             font-weight: 500;
             color: $primary;
             margin: 100px 0 35px 0;
@@ -157,15 +184,16 @@ p{
     h2{
         color: $primary;
         position: relative;
-        &:after{
-            content: "";
-            display: inline-block;
-            width: 60px;
-            position: absolute;
-            top: 62px;
-            left: 152px;
-            border-bottom: 2px solid $primary;
-        }
+    }
+     h2:after{
+        content: "";
+        display: inline-block;
+        width: 60px;
+        position: absolute;
+        transform: translateX(50%);
+        bottom: -46%;
+        right: 50%;
+        border-bottom: 2px solid $primary;
     }
     h2,h3{
         text-align:center;
@@ -175,8 +203,32 @@ p{
 }
 .vp-statement{
     p,h4{
-        text-align: center;
         color: white;
+        display: inline-block;
+    }
+    p:first-of-type{
+        margin-bottom: 100px;
+        @include sans-highlights-p(2.1rem);
+        text-align: center;
+        @media (max-width: 940px) {
+            font-size: 1.6rem;
+        }
+    }
+    p:last-of-type{
+        text-transform: capitalize;
+    }
+    h4{
+        position: relative;
+    }
+    h4::after{
+        content: "";
+        display: block;
+        width: 60px;
+        // height: 1px;
+        border: 1px solid white;
+        position: absolute;
+        transform: translateX(50%);
+        top:-141%;
     }
 }
 .news{
@@ -200,6 +252,11 @@ p{
         }
         p:last-of-type{
             color: $primary;
+        }
+        h3,p{
+            @media (max-width: 940px) {
+                font-size: 1.4rem;
+            }
         }
     }
 }
@@ -229,6 +286,16 @@ p{
     .company-vision p{
         color: $p-color;
     }
+    form{
+        margin-top:100px;
+    }
+    form label{
+        font-size: 1.4rem;
+    }
+    form input{
+        color: $p-color;
+        font-size: 1.4rem;
+    }
 }
 .quick-links{
     h3{
@@ -244,6 +311,9 @@ p{
         letter-spacing: 0.4px;
         color: $p-color;
         text-transform: capitalize;
+        @media (max-width: 940px) {
+            font-size: 1.2rem;
+        }
     }
     a:hover{
         color: $primary;
@@ -260,6 +330,9 @@ p{
             @include sans-highlights-p(1.5rem)
             color: $p-color;
             transition: all 0.5s;
+            @media (max-width: 940px) {
+                font-size: 1.2rem;
+            }
         }
         a:hover{
             color: $primary;
