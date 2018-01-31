@@ -7,6 +7,9 @@
     @media (max-width: 768px) {
         padding: 10px 0;
     }
+    @media (max-width: 480px) {
+        display: none;
+    }
 }
 .contact-info{
     @extend .flex;
@@ -136,6 +139,10 @@ select{
         border: 2px solid $primary;
         align-self: center;
         color: $primary;
+        &:hover{
+            background: $primary;
+            color: white;
+        }
         @media (max-width: 940px) {
             flex-basis: 20%;
             font-size: 1.2rem;

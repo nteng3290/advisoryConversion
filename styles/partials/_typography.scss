@@ -17,9 +17,15 @@ h1{
 }
 h2{
     @include serif-headings(4.5rem);
+    @media (max-width: 768px) {
+        font-size: 3.2rem;
+    }
 }
 h3{
     @include serif-headings(2rem);
+    @media (max-width: 480px) {
+        font-size: 1.8rem;
+    }
 }
 h4{
     @include sans-headings(2.2rem);
@@ -33,14 +39,23 @@ h6{
     position: absolute;
     color: $text-design;
     text-align: center;
-    top: -91px;
+    top: -122px;
     z-index: -1;
+    @media (max-width: 768px) {
+        top: -135px;
+    }
     @media (max-width: 480px) {
-        top: -122px;
+        top: -144px;
     }
 }
 p{
     @include p-text(1.6rem);
+    @media (max-width: 940px) {
+        line-height: 27px;
+    }
+    @media (max-width: 480px) {
+        line-height: 25px;
+    }
 }
 .contact-info{
     a{
@@ -159,7 +174,6 @@ p{
         }
         p{
             margin: 20px 0;
-            line-height: 36px;
             @media (max-width: 940px) {
                 text-align: right;
             }
@@ -192,7 +206,6 @@ p{
             text-transform: none;
             font-weight: 500;
             color: $primary;
-            margin: 100px 0 35px 0;
         }
     }
 }
@@ -249,6 +262,7 @@ p{
             font-size: 1.2rem;
             margin-bottom: 75px;
         }
+        margin: 50px 0;
     }
     p:last-of-type{
         text-transform: capitalize;
@@ -339,6 +353,9 @@ p{
         @include p-text(1.8rem);
         color:white;
         margin-bottom: 30px;
+        @media (max-width: 480px) {
+            margin-bottom: 20px;
+        }
     }
     li{
         margin: 10px 0;
@@ -361,6 +378,9 @@ p{
         @include sans-highlights(1.8rem);
         color:white;
         margin-bottom: 30px;
+        @media (max-width: 480px) {
+            margin-bottom: 20px;
+        }
     }
     .link-news{
         p,a{
@@ -374,5 +394,11 @@ p{
         a:hover{
             color: $primary;
         }
+    }
+}
+.copyright{
+    p{
+        color: $p-color;
+        text-transform: capitalize;
     }
 }

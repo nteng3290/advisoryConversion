@@ -14,11 +14,8 @@
 }
 .fourth{
     width: 23%;
-    @media (max-width: 940px) {
-        width: 20%;
-    }
     @media (max-width: 480px) {
-        width: 80%;
+        width: 100%;
     }
 }
 .projects-img,
@@ -49,9 +46,9 @@
         }
     }
     .co-description button{
-        margin-top:100px;
+        margin-top:74px;
         @media (max-width: 940px) {
-            margin-top:92px;
+            margin-top:42px;
         }
         @media (max-width: 768px) {
             margin: 40px 0;
@@ -121,8 +118,16 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        transition: all 0.5s ease-in-out;
+        &:hover{
+            outline: 2px solid $primary;
+            outline-offset: -30px;
+        }
         @media (max-width: 940px) {
-            padding: 20px;
+            padding: 30px;
+        }
+        @media (max-width: 768px) {
+            padding: 21px;
         }
         @media (max-width: 480px) {
             min-height: 320px;
@@ -130,6 +135,9 @@
         }
         h4{
             margin: 30px 0;
+            @media (max-width: 940px) {
+                margin: 20px 0;
+            }
         }
     }
     .service-icon{
@@ -169,56 +177,74 @@
     .rationals-content{
         flex-basis: 50%;
     }
+    .rationals-content h5{
+        margin: 100px 0 35px 0;
+        @media (max-width: 768px) {
+            margin: 60px 0 20px 0;
+        }
+    }
     .rational-image{
         flex-basis: 45%;
         margin-right: 10px;
     }
-    .rationals{
-        @extend .flex;
+}
+.rationals{
+    @extend .flex;
+    @media (max-width: 480px) {
+        flex-direction: column;
+    }
+    .third{
+        border: 1px solid $bg-color;
+        padding: 30px;
+        min-height: 170px;
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        p{
+            margin: 10px 0;
+        }
+        &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 0;
+            background: transparent;
+            transition: all 0.5s ease;
+        }
+        &:hover:before{
+            width: 2px;
+            height:100%;
+            background: $primary;
+        }
+        &:hover h5{
+            color: $primary;
+        }
+        @media (max-width: 768px) {
+            padding: 20px;
+        }
         @media (max-width: 480px) {
-            flex-direction: column;
+            margin-bottom: 20px;
         }
-        .third{
-            border: 1px solid $bg-color;
-            padding: 30px;
-            min-height: 170px;
-            transition: all 0.5s ease-in-out;
-            position: relative;
-            &:before{
-                content: '';
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 2px;
-                height: 0;
-                background: transparent;
-                transition: all 0.5s ease;
-            }
-            &:hover:before{
-                width: 2px;
-                height:100%;
-                background: $primary;
-            }
-            &:hover h5{
-                color: $primary;
-            }
-            @media (max-width: 480px) {
-                margin-bottom: 20px;
-            }
-        }
-        .rational-title{
-           @extend .flex;
-           justify-content: space-around;
-        }
-        .rational-title h5{
+    }
+    .rational-title{
+        @extend .flex;
+        justify-content: space-around;
+        h5{
             flex-basis: 80%;
+        } 
+        img{
+            margin-right: 10px;
         }
     }
 }
 .credentials{
     margin: 30px 0;
     background: $block;
+    @media (max-width: 480px) {
+        // padding: 50px 0;
+    }
     .outer-wrapper{
         @extend .flex;
         justify-content: space-around; 
@@ -230,16 +256,34 @@
         padding: 50px;
         &:not(:last-child){
             border-right: 1px solid $primary;
+            @media (max-width: 480px) {
+                border-right: none;
+                border-bottom: 1px dotted $primary;
+            }
+            // Nested 4 deep?
         }
         @media (max-width: 940px) {
             padding: 10px;
+            min-height: 212px;
+        }
+        @media (max-width: 768px) {
+            padding: 30px 16px;
         }
         @media (max-width: 480px) {
-            border: none;
+           display: flex;
+           flex-direction: row;
+           padding: 50px;
         }
     }
     .fourth .icon{
         width: 30px;
+        @media (max-width: 768px) {
+            min-height: 33px;
+        }
+        @media (max-width: 480px) {
+            width: 50px;
+            margin-right: 20px;
+        }
     }
 }
 .projects{
@@ -286,6 +330,21 @@
             flex-basis: 60%;
         }     
     }
+    .statement-nav{
+        @extend .flex;
+        margin-top: 50px;
+        .tab{
+            background:#347ad8;
+            border-radius: 20px;
+            width: 20px;
+            height: 10px;
+            margin: 0 5px;
+            transition: all 0.5s;
+        }
+        .tab:hover{
+            background: white;
+        }
+    }
 }
 .news{
     margin: 100px 0;
@@ -299,6 +358,7 @@
     margin-bottom: 80px;
     @media (max-width: 480px) {
         flex-direction: column;
+        margin-bottom: 30px;
     }
     h3{
         flex-basis: 85%;
@@ -308,6 +368,9 @@
     }
     button{
         @extend .transparent;
+        @media (max-width: 480px) {
+            margin: 10px;
+        }
     }
 }
 .news-article{
@@ -323,7 +386,7 @@
     }
     .third{
         @media (max-width: 480px) {
-            margin-bottom: 20px;
+            margin-bottom: 50px;
         }
     }
 }                                          
@@ -334,6 +397,8 @@
         padding: 100px 0;
         @media (max-width: 480px) {
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         @media (max-width: 480px) {
             padding: 50px 0;
