@@ -21,6 +21,9 @@ footer{
         bottom: 26px;
         @media (max-width: 480px) {
             flex-direction: column;
+            padding: 15px;
+            align-items: flex-start;
+            justify-content: space-between;
         }
     }
     .footer-contact-accent{
@@ -40,7 +43,12 @@ footer{
             @media (max-width: 768px) {
                 max-width: 30px;
                 max-height: 16px;
-            }
+            } 
+        }
+    }
+    .foot-email img{
+        @media (max-width: 480px) {
+            max-width: 25px;
         }
     }
 }

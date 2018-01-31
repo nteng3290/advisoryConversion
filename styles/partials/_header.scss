@@ -5,9 +5,6 @@
         @extend .flex;
     }
     @media (max-width: 768px) {
-        padding: 10px 0;
-    }
-    @media (max-width: 480px) {
         display: none;
     }
 }
@@ -169,6 +166,7 @@ select{
         padding: 10px;
         flex-basis: 70%;
         @media (max-width: 768px) {
+            display: none;
             position: absolute;
             width: 100%;
             top: 52px;
@@ -176,7 +174,12 @@ select{
             z-index: 1;
             background: $primary;
             border-top: 1px solid white;
-            transition: all 1s ease-in-out;
+        }
+        a{
+        border-bottom: 2px solid transparent;
+        }
+        a:hover{
+            border-bottom: 2px solid white;
         }
     }
     .page-nav-icons{
@@ -208,7 +211,17 @@ select{
             flex-basis: 25%;
             align-content: flex-end;
         }
+        a{
+            color: white;
+        }
+        a:hover{
+            color: #2d71cd;
+        }
     }
+}
+ul.page-nav-menu.open{
+    display: flex;
+    
 }
 .hamburger{
     display: none;
@@ -216,7 +229,7 @@ select{
 @media (max-width: 768px) {
     .hamburger{
         display: block;
-        flex-basis: 50%;
+        flex-basis: 70%;
     }
 }
 

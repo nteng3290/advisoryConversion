@@ -1,9 +1,13 @@
 .half{
     @extend .flex;
     margin-bottom: 20px;
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
+        width: 48%;
         flex-direction: column;
         justify-content: space-between;
+    }
+    @media (max-width: 480px) {
+        width: 90%;
     }
 }
 .third{
@@ -24,6 +28,32 @@
     align-items: flex-start;
     justify-content: space-between;
 }
+.news-img{
+    position: relative;
+    width: 100%;
+}
+.news-hover{
+    display: none;
+    position: absolute;
+    background: $primary;
+    opacity: 0.8;
+    width: 99%;
+    height: 99%;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+// .news-img-img{
+//     width: 100%;
+//     img{
+//         width: 100%;
+//     }
+// }
+.news-img:hover .news-hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .about-us{
     margin: 50px 0;
     background: url(../images/icons/Ellipse-left.png) no-repeat;
@@ -35,7 +65,7 @@
     .about-us-stuff{
         @extend .flex;
         align-items: flex-start;
-        @media (max-width: 480px) {
+        @media (max-width: 768px) {
             flex-direction: column;
         }
     }
@@ -106,7 +136,13 @@
     background-position: bottom right;
     background-size: 157px;
     padding: 100px 0;
-    @media (max-width: 480px) {
+    .service-area{
+        @media (max-width: 768px) {
+           display: flex;
+           justify-content: space-between;
+        }
+    }
+    @media (max-width: 768px) {
         display: flex;
         flex-direction: row;
     }
@@ -122,12 +158,17 @@
         &:hover{
             outline: 2px solid $primary;
             outline-offset: -30px;
+            @media (max-width: 768px) {
+                outline-offset: -20px;
+            }
         }
         @media (max-width: 940px) {
             padding: 30px;
         }
         @media (max-width: 768px) {
             padding: 21px;
+            margin-bottom: 20px;
+            width: 100%;
         }
         @media (max-width: 480px) {
             min-height: 320px;
