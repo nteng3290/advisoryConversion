@@ -785,7 +785,7 @@ select {
         display: none;
         position: absolute;
         width: 100%;
-        top: 52px;
+        top: 50px;
         left: 0;
         z-index: 1;
         background: #2f87fd;
@@ -1247,6 +1247,7 @@ ul.page-nav-menu.open {
         padding: 30px 16px; } }
     @media (max-width: 480px) {
       .credentials .fourth {
+        width: 100%;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
